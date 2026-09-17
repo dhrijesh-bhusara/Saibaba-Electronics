@@ -40,6 +40,122 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  .main-navbar {
+    padding: 10px 0 12px;
+  }
+
+  .nav-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .brand-logo {
+    flex: 1 1 auto;
+    min-width: 0;
+    transform: none;
+  }
+
+  .logo-sai {
+    font-size: 19px;
+  }
+
+  .logo-electronics {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .mega-menu-wrapper {
+    display: none;
+  }
+
+  .nav-actions {
+    flex: 0 0 auto;
+    gap: 10px;
+  }
+
+  .nav-actions .action-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .account-label {
+    display: none;
+  }
+
+  .search-container {
+    display: block;
+    order: 3;
+    flex: 1 0 100%;
+    max-width: none;
+  }
+
+  .search-input {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  .categories-bar {
+    display: block;
+  }
+
+  .categories-content {
+    justify-content: flex-start;
+    gap: 4px;
+    padding-right: 16px;
+    padding-left: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .categories-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-item {
+    flex: 0 0 auto;
+    padding: 11px 10px;
+    font-size: 12px;
+  }
+
+  .mobile-menu {
+    top: 100%;
+    padding: 16px;
+  }
+
+  .mobile-menu .mobile-search {
+    display: none;
+  }
+
+  .search-results {
+    max-height: min(55vh, 360px);
+    overflow-y: auto;
+  }
+
+  .search-results a {
+    grid-template-columns: 44px minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .search-result-thumb {
+    width: 44px;
+    height: 44px;
+  }
+
+  .search-result-copy span,
+  .search-results strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
 .top-bar-links {
   display: flex;
   gap: 16px;

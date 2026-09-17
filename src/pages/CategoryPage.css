@@ -114,4 +114,28 @@
     flex-direction: column;
     align-items: stretch;
   }
+
+  .catalog-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  .catalog-grid .product-card {
+    padding: 12px;
+  }
+
+  .catalog-grid .product-img {
+    height: 140px;
+    margin-bottom: 12px;
+  }
+
+  .catalog-grid .product-title {
+    font-size: 13px;
+  }
+
+  .catalog-grid .btn {
+    width: 100%;
+    padding: 10px 8px;
+    font-size: 12px;
+  }
 }

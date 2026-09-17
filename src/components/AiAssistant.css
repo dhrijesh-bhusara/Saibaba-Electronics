@@ -287,12 +287,43 @@
     right: 12px;
     left: 12px;
     bottom: 88px;
-    width: auto;
+    width: 100%;
+    max-width: calc(100% - 24px);
     height: min(520px, calc(100vh - 96px));
+    border-radius: 16px;
   }
 
   .ai-assistant-launcher {
     right: 18px;
     bottom: 18px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .quick-prompts {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .quick-prompts::-webkit-scrollbar {
+    display: none;
+  }
+
+  .quick-prompt {
+    flex: 0 0 auto;
+  }
+
+  .chat-stream {
+    padding: 12px 10px;
+  }
+
+  .message-bubble {
+    max-width: 92%;
+    overflow-wrap: anywhere;
+  }
+
+  .chat-input-row {
+    padding: 10px;
   }
 }

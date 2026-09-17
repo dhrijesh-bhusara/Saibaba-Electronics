@@ -524,8 +524,48 @@
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+    background: var(--primary);
+  }
+
+  .hero-bg {
+    position: relative;
+    order: 2;
+    height: 260px;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.42));
+  }
+
+  .hero-content {
+    order: 1;
+    width: 100%;
+    padding-top: 42px;
+    padding-bottom: 38px;
+    background: var(--primary);
+  }
+
+  .hero-text-content {
+    max-width: none;
+  }
+
   .hero-title {
     font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .hero-badges {
+    flex-wrap: wrap;
+    margin-bottom: 18px;
   }
   
   .hero-stats {
@@ -535,6 +575,12 @@
   
   .hero-actions {
     flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
   }
   
   .trust-bar {
@@ -549,6 +595,101 @@
   
   .categories-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .product-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .product-img {
+    height: 140px;
+    margin-bottom: 12px;
+  }
+
+  .product-title {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .price-row {
+    gap: 6px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .mrp,
+  .rating {
+    font-size: 11px;
+  }
+
+  .product-card .btn {
+    width: 100%;
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .wishlist-button {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .product-badge {
+    top: 10px;
+    left: 10px;
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+
+  .offer-banner {
+    border-radius: 16px;
+  }
+
+  .offer-content h2 {
+    font-size: 30px;
+  }
+
+  .offer-content p {
+    font-size: 15px;
+  }
+
+  .countdown {
+    gap: 8px;
+    font-size: 18px;
+  }
+
+  .time-box {
+    padding: 9px 12px;
+  }
+
+  .time-box span {
+    font-size: 22px;
+  }
+
+  .about-content h2 {
+    font-size: 30px;
+  }
+
+  .about-desc {
+    font-size: 16px;
   }
   
   .section-header {
