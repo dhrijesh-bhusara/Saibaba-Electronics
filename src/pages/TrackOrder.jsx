@@ -285,7 +285,7 @@ export default function TrackOrder() {
                 <div className="order-top">
                   <div>
                     <strong>Order #{order.id}</strong>
-                    <div>{new Date(order.created_at || Date.now()).toLocaleDateString('en-IN')}</div>
+                    <div>{order.created_at ? new Date(order.created_at).toLocaleDateString('en-IN') : 'Date unavailable'}</div>
                   </div>
                   <button className="btn btn-outline">Track Progress</button>
                 </div>

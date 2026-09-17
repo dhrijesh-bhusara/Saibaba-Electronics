@@ -14,6 +14,7 @@ import Checkout from './pages/Checkout';
 import OrderSuccess from './pages/OrderSuccess';
 import CartDrawer from './components/CartDrawer';
 import AuthModal from './components/AuthModal';
+import AiAssistant from './components/AiAssistant';
 import MyOrders from './pages/MyOrders';
 import TrackOrder from './pages/TrackOrder';
 import About from './pages/About';
@@ -21,6 +22,9 @@ import Contact from './pages/Contact';
 import Careers from './pages/Careers';
 import StoreLocator from './pages/StoreLocator';
 import EmiOptions from './pages/EmiOptions';
+import Wishlist from './pages/Wishlist';
+import AdminRoute from './components/AdminRoute';
+import AdminDashboard from './pages/AdminDashboard';
 
 // Supabase
 
@@ -62,7 +66,13 @@ function App() {
   };
 
   const handleCategoryClick = (categorySlug) => {
-    setSelectedCategory((prev) => (prev === categorySlug ? null : categorySlug));
+    setSelectedCategory((prev) => {
+      const nextValue = prev === categorySlug ? null : categorySlug;
+      if (nextValue === null) {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }
+      return nextValue;
+    });
   };
 
   return (
@@ -81,6 +91,7 @@ function App() {
               />
               <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
               <AuthModal />
+              <AiAssistant />
               <main className="main-content">
                 <Routes>
                   <Route path="/" element={<Home selectedCategory={selectedCategory} onCategorySelect={handleCategoryClick} />} />
@@ -89,6 +100,10 @@ function App() {
                   <Route path="/checkout" element={<Checkout />} />
                   <Route path="/order-success/:orderId" element={<OrderSuccess />} />
                   <Route path="/orders" element={<MyOrders />} />
+                  <Route path="/wishlist" element={<Wishlist />} />
+                  <Route element={<AdminRoute />}>
+                    <Route path="/admin" element={<AdminDashboard />} />
+                  </Route>
                   <Route path="/track-order" element={<TrackOrder />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
